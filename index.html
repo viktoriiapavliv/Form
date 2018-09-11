@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style>
+        .inline {
+            display: inline;
+        }
+        fieldset {
+            width: 500px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        fieldset {
+            margin-bottom: 20px;
+        }
+        input {
+            margin-left: 10px;
+        }
+        .left {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Форма бронювання готельного номера</h1>
+
+    <form>
+        <fieldset>
+            <legend>Контактна інформація</legend>
+            <p><label for="name">ПІБ*</label><input type="text" id="name" required ></p>
+            <p><label for="phone">Телефон*</label><input type="tel" id="phone" required maxlength="14"></p>
+            <p><label for="email">E-mail</label><input type="email" id="email"required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"></p>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Деталі</legend>
+            <p><label for="date">Дата приїзду</label><input type="date" id="date"></p>
+
+            <label>Категорія номера</label><select class="left" title="Категорія номера">
+                <option disabled="сhoose">Оберіть категорію номера</option>
+                <option value="стандарт">Стандарт</option>
+                <option value="сімейний">Сімейний</option>
+                <option value="бізнес">Бізнес</option>
+            </select>
+
+
+           <p style="margin-top: 40px";> Чи проживатимете Ви з домашнім улюбленцем? </p>
+            <span class="inline">
+            <label>Так</label><input type="radio">
+            <label>Ні</label><input type="radio">
+            </span>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Побажання та пропозиції</legend>
+            <textarea id="text" cols="30" rows="3"></textarea>
+        </fieldset>
+
+        <input type="submit" value="Надіслати">
+    </form>
+
+</body>
+</html>
